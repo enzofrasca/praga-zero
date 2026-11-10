@@ -15,3 +15,38 @@
     --cinza: #4a4a4a;
     --borda: #d9d4c7;
 }
+
+/* Base */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--texto);
+    background: var(--fundo);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0 0 12px;
+    line-height: 1.25;
+    color: var(--verde-escuro);
+}
+
+h1 {
+    font-size: 2rem;
+}
