@@ -108,3 +108,58 @@ textarea {
     max-width: 700px;
     color: var(--cinza);
 }
+
+.nota {
+    font-size: 0.9rem;
+    color: var(--cinza);
+}
+
+.cientifico {
+    font-style: italic;
+    color: var(--cinza);
+}
+
+.tag {
+    padding: 0 8px;
+    border: 1px solid var(--terra);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: var(--terra);
+}
+
+.grade {
+    display: grid;
+    gap: 20px;
+}
+
+.acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.bloco {
+    margin-top: 24px;
+}
+
+/* Cabeçalho e menu */
+
+.topo {
+    background: var(--verde-escuro);
+}
+
+.topo__conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 64px;
+}
+
+.marca {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
