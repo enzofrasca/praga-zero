@@ -1,0 +1,17 @@
+/* Praga Zero: estilos do site (celular primeiro; tablet a partir de 768px, desktop a partir de 1200px) */
+
+:root {
+    --verde: #2e6b3a;
+    --verde-escuro: #1f4d29;
+    --verde-claro: #e3efe3;
+    --terra: #a6512a;
+    --terra-clara: #f6e7dd;
+    --areia: #f6f3ec;
+    --vermelho: #b3261e;
+    --vermelho-claro: #fbe4e2;
+    --laranja: #8a5300;
+    --fundo: #ffffff;
+    --texto: #1e1e1e;
+    --cinza: #4a4a4a;
+    --borda: #d9d4c7;
+}
