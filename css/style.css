@@ -163,3 +163,38 @@ textarea {
     color: #ffffff;
     text-decoration: none;
 }
+
+.menu-botao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 48px;
+    height: 48px;
+    padding: 0 11px;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    background: none;
+    cursor: pointer;
+}
+
+.menu-botao span {
+    height: 3px;
+    background: #ffffff;
+}
+
+.menu {
+    display: none;
+    width: 100%;
+    padding-bottom: 16px;
+}
+
+.menu--aberto {
+    display: block;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
