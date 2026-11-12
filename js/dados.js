@@ -149,3 +149,4 @@ const ATER = 'Casa da Agricultura de Ibiúna (FICTÍCIO), tel. (11) 0000-0000';
 
 // Textos de segurança: iguais no site, no bot e no console
 const RODAPE_MANEJO = 'Se o ataque estiver forte, procure a assistência técnica (Emater/ATER) da sua cidade. Não use veneno sem receita de um profissional habilitado.';
+const MENSAGEM_INCERTEZA = 'Não foi possível sugerir uma hipótese confiável.';
