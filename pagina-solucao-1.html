@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Triagem | Praga Zero</title>
+    <meta name="description" content="Escolha a cultura, marque os sinais da plantação e veja os problemas compatíveis, o nível de atenção e o próximo passo.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/icons/sprout.svg" type="image/svg+xml">
+</head>
+<body>
+    <header class="topo">
+        <div class="container topo__conteudo">
+            <a class="marca" href="index.html">Praga Zero</a>
+            <button class="menu-botao" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="menu" id="menu-principal" aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="pagina-solucao-1.html" aria-current="page">Triagem</a></li>
+                    <li><a href="pagina-solucao-2.html">Guia de pragas</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="integrantes.html">Integrantes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo">
+        <section class="pagina-titulo">
+            <div class="container">
+                <p class="sobretitulo">Solução 1</p>
+                <h1>Triagem de sinais da plantação</h1>
+                <p>Escolha a cultura, marque o que você está vendo e descubra os possíveis problemas compatíveis, o nível de atenção e o próximo passo seguro.</p>
+                <p class="aviso"><strong>Triagem orientativa:</strong> o resultado mostra problemas compatíveis com os sinais marcados. Não é diagnóstico e não substitui a assistência técnica.</p>
+            </div>
+        </section>
+
+        <section class="secao">
+            <div class="container">
+                <h2>Conte o que você está vendo</h2>
+                <form id="form-triagem" novalidate>
+                    <fieldset class="etapa">
+                        <legend>1. Qual é a cultura?</legend>
+                        <div class="grade-opcoes" id="lista-culturas"></div>
+                        <p class="erro" id="erro-cultura" hidden>Escolha uma cultura para continuar.</p>
+                    </fieldset>
