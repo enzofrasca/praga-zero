@@ -50,3 +50,23 @@
                         <div class="grade-opcoes" id="lista-culturas"></div>
                         <p class="erro" id="erro-cultura" hidden>Escolha uma cultura para continuar.</p>
                     </fieldset>
+
+                    <fieldset class="etapa">
+                        <legend>2. O que aparece na planta?</legend>
+                        <p class="nota">Marque todos os sinais que você está vendo. Pode marcar mais de um.</p>
+                        <div class="grade-opcoes" id="lista-sintomas"></div>
+                        <p class="erro" id="erro-sintomas" hidden>Marque pelo menos um sinal.</p>
+                    </fieldset>
+
+                    <button class="btn" type="submit">Ver problemas compatíveis</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="secao secao--alt" id="resultado" hidden>
+            <div class="container">
+                <h2>3. Problemas compatíveis</h2>
+                <p id="resumo-escolha"></p>
+                <p class="nota">Só aparecem problemas com índice de 50% ou mais, do maior para o menor.</p>
+                <div id="candidatos" aria-live="polite"></div>
+            </div>
