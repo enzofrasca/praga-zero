@@ -19,3 +19,33 @@ CULTURAS.forEach((cultura) => {
             <input type="radio" name="cultura" value="${cultura.codigo}">
             <span>${cultura.nome}</span>
         </label>`;
+});
+document.querySelector('#lista-culturas').innerHTML = htmlCulturas;
+
+// Passo 2: os 21 sintomas.
+// Não filtramos pela cultura, senão o caso sem candidato (RN11) nunca aconteceria
+let htmlSintomas = '';
+SINTOMAS.forEach((sintoma) => {
+    htmlSintomas += `
+        <label class="opcao">
+            <input type="checkbox" name="sintoma" value="${sintoma.codigo}">
+            <span>${sintoma.descricao}</span>
+        </label>`;
+});
+document.querySelector('#lista-sintomas').innerHTML = htmlSintomas;
+
+// Passo 3: problemas compatíveis
+formTriagem.addEventListener('submit', (evento) => {
+    evento.preventDefault();
+
+    const culturaMarcada = document.querySelector('input[name="cultura"]:checked');
+    const sintomasEscolhidos = [];
+    document.querySelectorAll('input[name="sintoma"]:checked').forEach((caixa) => {
+        sintomasEscolhidos.push(caixa.value);
+    });
+
+    // Sem cultura ou sem sinal, mostra o erro e para aqui
+    const erroCultura = document.querySelector('#erro-cultura');
+    const erroSintomas = document.querySelector('#erro-sintomas');
+    erroCultura.hidden = true;
+    erroSintomas.hidden = true;
