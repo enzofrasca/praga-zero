@@ -66,3 +66,24 @@ function classificarNivel(percentual) {
     } else {
         return 'ALTO';
     }
+}
+
+// RN07: vai para o técnico se for ALTO, sem praga identificada ou P05
+function definirStatus(nivel, praga) {
+    if (nivel === 'ALTO' || praga === undefined || praga.encaminhar) {
+        return 'AGUARDANDO_TECNICO';
+    }
+    return 'ABERTA';
+}
+
+// RN04: o índice aparece arredondado para inteiro (66,67 vira 67%)
+function formatarIndice(indice) {
+    return Math.round(indice) + '%';
+}
+
+// O % de plantas atacadas aparece com uma casa e vírgula (7,5%)
+function formatarPercentual(valor) {
+    const arredondado = Math.round(valor * 10) / 10;
+    const texto = String(arredondado).replace('.', ',');
+    return texto + '%';
+}
