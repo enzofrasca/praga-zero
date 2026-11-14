@@ -239,3 +239,41 @@ textarea {
     font-size: 0.85rem;
     text-align: center;
 }
+
+/* Botões */
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 2px solid var(--verde);
+    border-radius: 30px;
+    background: var(--verde);
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--verde-escuro);
+}
+
+.btn--secundario {
+    background: none;
+    color: var(--verde-escuro);
+}
+
+.btn--secundario:hover {
+    background: var(--verde-claro);
+}
+
+.btn--claro {
+    border-color: #ffffff;
+    background: #ffffff;
+    color: var(--verde-escuro);
+}
+
+.btn--pequeno {
+    padding: 6px 16px;
+    font-size: 0.9rem;
+}
