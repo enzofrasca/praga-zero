@@ -49,3 +49,60 @@ formTriagem.addEventListener('submit', (evento) => {
     const erroSintomas = document.querySelector('#erro-sintomas');
     erroCultura.hidden = true;
     erroSintomas.hidden = true;
+
+    if (culturaMarcada === null) {
+        erroCultura.hidden = false;
+    }
+    if (sintomasEscolhidos.length === 0) {
+        erroSintomas.hidden = false;
+    }
+    if (culturaMarcada === null || sintomasEscolhidos.length === 0) {
+        return;
+    }
+
+    const cultura = buscarCultura(culturaMarcada.value);
+    const candidatos = triar(cultura.codigo, sintomasEscolhidos);
+
+    mostrarCandidatos(cultura, sintomasEscolhidos, candidatos);
+    pragaEscolhida = undefined;
+    if (candidatos.length > 0) {
+        pragaEscolhida = candidatos[0].praga;
+    }
+    secaoPasso.hidden = true;
+    secaoResultado.hidden = false;
+    secaoNivel.hidden = false;
+    secaoResultado.scrollIntoView();
+});
+
+function mostrarCandidatos(cultura, sintomasEscolhidos, candidatos) {
+    const nomes = [];
+    sintomasEscolhidos.forEach((codigo) => {
+        nomes.push(buscarSintoma(codigo).descricao.toLowerCase());
+    });
+    document.querySelector('#resumo-escolha').textContent = cultura.nome + ': ' + nomes.join(', ') + '.';
+
+    let html = '';
+
+    // RN11: nenhum candidato confiável
+    if (candidatos.length === 0) {
+        html = `<div class="aviso aviso--alerta">
+            <strong>${MENSAGEM_INCERTEZA}</strong>
+            <p>Nenhum problema cadastrado para ${cultura.nome} chegou a 50% de compatibilidade com esses sinais. Isso não quer dizer que a planta está sadia.</p>
+            <p>Procure a assistência técnica: ${ATER}.</p>
+        </div>`;
+    }
+
+    candidatos.forEach((candidato) => {
+        const praga = candidato.praga;
+
+        html += `<article class="card">
+            <h3>${praga.nome} <span class="tag">${praga.tipo}</span></h3>
+            <p class="cientifico">${praga.cientifico}</p>
+            <p><strong>Índice de compatibilidade: ${formatarIndice(candidato.indice)}</strong></p>`;
+
+        if (praga.encaminhar) {
+            html += '<p class="aviso aviso--alerta">Esses sinais não confirmam a causa. Este caso sempre deve ser visto pelo técnico.</p>';
+        }
+
+        html += '</article>';
+    });
