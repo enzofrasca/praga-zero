@@ -315,3 +315,26 @@ textarea {
     border-color: var(--vermelho);
     background: var(--vermelho-claro);
 }
+
+/* Formulários */
+
+.campo {
+    margin-bottom: 18px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #7a7568;
+    border-radius: 8px;
+    background: var(--fundo);
+    color: var(--texto);
+}
