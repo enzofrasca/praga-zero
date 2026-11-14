@@ -50,3 +50,38 @@ PRAGAS.forEach((praga) => {
             <h4>Cuidados sem veneno</h4>
             <ol class="manejos">${manejos}</ol>
         </li>`;
+});
+listaPragas.innerHTML = htmlCards;
+
+// Botões do filtro: "Todas" + uma por cultura
+let htmlFiltro = '<button class="filtro__botao" type="button" data-cultura="" aria-pressed="true">Todas</button>';
+CULTURAS.forEach((cultura) => {
+    htmlFiltro += `<button class="filtro__botao" type="button" data-cultura="${cultura.codigo}" aria-pressed="false">${cultura.nome}</button>`;
+});
+filtro.innerHTML = htmlFiltro;
+
+const botoesFiltro = document.querySelectorAll('.filtro__botao');
+
+// RN03: mostra só as pragas que atacam a cultura escolhida
+function filtrar(cultura) {
+    document.querySelectorAll('.card-praga').forEach((card) => {
+        if (cultura === '' || card.dataset.culturas.includes(cultura)) {
+            card.hidden = false;
+        } else {
+            card.hidden = true;
+        }
+    });
+
+    // Deixa marcado só o botão que foi clicado
+    botoesFiltro.forEach((botao) => {
+        if (botao.dataset.cultura === cultura) {
+            botao.setAttribute('aria-pressed', 'true');
+        } else {
+            botao.setAttribute('aria-pressed', 'false');
+        }
+    });
+}
+
+botoesFiltro.forEach((botao) => {
+    botao.addEventListener('click', () => filtrar(botao.dataset.cultura));
+});
