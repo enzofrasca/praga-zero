@@ -373,3 +373,27 @@ textarea {
     gap: 32px;
     align-items: center;
 }
+
+.hero__slogan {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #f2c38b;
+}
+
+.hero img {
+    border-radius: 16px;
+}
+
+.hero .btn {
+    border-color: #ffffff;
+}
+
+/* Sobre */
+
+.destaque {
+    display: block;
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.1;
+    color: var(--terra);
+}
