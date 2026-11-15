@@ -50,3 +50,32 @@
                             <input type="text" id="nome" autocomplete="name" aria-describedby="erro-nome">
                             <p class="erro" id="erro-nome" hidden></p>
                         </div>
+
+                        <div class="campo">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" autocomplete="email" aria-describedby="erro-email">
+                            <p class="erro" id="erro-email" hidden></p>
+                        </div>
+
+                        <div class="campo">
+                            <label for="assunto">Assunto</label>
+                            <select id="assunto" aria-describedby="erro-assunto">
+                                <option value="">Escolha um assunto</option>
+                                <option value="duvida">Dúvida sobre a triagem</option>
+                                <option value="conteudo">Sugestão de conteúdo</option>
+                                <option value="parceria">Parceria (cooperativa ou prefeitura)</option>
+                                <option value="outro">Outro assunto</option>
+                            </select>
+                            <p class="erro" id="erro-assunto" hidden></p>
+                        </div>
+
+                        <div class="campo">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" aria-describedby="erro-mensagem"></textarea>
+                            <p class="erro" id="erro-mensagem" hidden></p>
+                        </div>
+
+                        <button class="btn" type="submit">Enviar mensagem</button>
+                    </form>
+                    <p class="aviso" id="sucesso" role="status" hidden><strong>Mensagem enviada!</strong> Obrigado pelo contato. Como este é um protótipo, nenhum dado foi enviado de verdade.</p>
+                </div>
