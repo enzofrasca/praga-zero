@@ -397,3 +397,63 @@ textarea {
     line-height: 1.1;
     color: var(--terra);
 }
+
+/* Triagem */
+
+.etapa {
+    margin: 0 0 24px;
+    padding: 20px;
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+}
+
+.etapa legend {
+    padding: 0 6px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--verde-escuro);
+}
+
+.grade-opcoes {
+    display: grid;
+    gap: 10px;
+}
+
+.opcao {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border: 2px solid var(--borda);
+    border-radius: 12px;
+    font-weight: bold;
+    line-height: 1.35;
+    cursor: pointer;
+}
+
+.opcao input {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    accent-color: var(--verde);
+}
+
+#candidatos {
+    display: grid;
+    gap: 16px;
+}
+
+.indicador {
+    border-top: 6px solid var(--verde);
+    text-align: center;
+}
+
+.indicador p {
+    margin: 0;
+    color: var(--cinza);
+}
+
+.indicador strong {
+    display: block;
+    font-size: 2rem;
+}
