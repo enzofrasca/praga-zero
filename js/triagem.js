@@ -106,3 +106,34 @@ function mostrarCandidatos(cultura, sintomasEscolhidos, candidatos) {
 
         html += '</article>';
     });
+
+    document.querySelector('#candidatos').innerHTML = html;
+}
+
+// Passos 4 e 5: nível de atenção, status e próximo passo
+formNivel.addEventListener('submit', (evento) => {
+    evento.preventDefault();
+
+    // Campo vazio vira NaN (e não 0) para cair na validação
+    const vistoriadas = campoVistoriadas.value.trim() === '' ? NaN : Number(campoVistoriadas.value);
+    const afetadas = campoAfetadas.value.trim() === '' ? NaN : Number(campoAfetadas.value);
+
+    // RN05: com erro, nada é calculado
+    const erros = validarVistoria(vistoriadas, afetadas);
+    mostrarErro(campoVistoriadas, erros.vistoriadas);
+    mostrarErro(campoAfetadas, erros.afetadas);
+    if (erros.vistoriadas !== '' || erros.afetadas !== '') {
+        secaoPasso.hidden = true;
+        return;
+    }
+
+    const praga = pragaEscolhida;
+    const percentual = calcularPercentual(vistoriadas, afetadas);
+    const nivel = classificarNivel(percentual);
+    const status = definirStatus(nivel, praga);
+
+    mostrarNivel(vistoriadas, afetadas, percentual, nivel, status, praga);
+    mostrarManejo(praga);
+
+    secaoPasso.hidden = false;
+    secaoPasso.scrollIntoView();
