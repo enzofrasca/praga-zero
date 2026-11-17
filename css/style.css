@@ -457,3 +457,28 @@ textarea {
     display: block;
     font-size: 2rem;
 }
+
+.indicador .status {
+    padding: 10px 0;
+    font-size: 1.1rem;
+}
+
+.nivel-medio {
+    border-top-color: var(--laranja);
+}
+
+.nivel-medio strong {
+    color: var(--laranja);
+}
+
+.nivel-alto {
+    border-top-color: var(--vermelho);
+}
+
+.nivel-alto strong {
+    color: var(--vermelho);
+}
+
+.manejos li {
+    padding: 6px 0;
+}
