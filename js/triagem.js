@@ -137,3 +137,52 @@ formNivel.addEventListener('submit', (evento) => {
 
     secaoPasso.hidden = false;
     secaoPasso.scrollIntoView();
+});
+
+function mostrarNivel(vistoriadas, afetadas, percentual, nivel, status, praga) {
+    // Texto que aparece embaixo do nível
+    let nomeNivel = 'BAIXO';
+    let acao = 'Continue olhando as plantas toda semana.';
+    if (nivel === 'MEDIO') {
+        nomeNivel = 'MÉDIO';
+        acao = 'Faça os cuidados sem veneno indicados abaixo.';
+    } else if (nivel === 'ALTO') {
+        nomeNivel = 'ALTO';
+        acao = 'Faça os cuidados e procure a assistência técnica.';
+    }
+
+    let html = `<div class="grade grade--3">
+        <div class="card indicador">
+            <p>Plantas atacadas</p>
+            <strong>${formatarPercentual(percentual)}</strong>
+            <p>${afetadas} de ${vistoriadas} plantas</p>
+        </div>
+        <div class="card indicador nivel-${nivel.toLowerCase()}">
+            <p>Nível de atenção</p>
+            <strong>${nomeNivel}</strong>
+            <p>${acao}</p>
+        </div>
+        <div class="card indicador">
+            <p>Status da ocorrência</p>
+            <strong class="status">${status}</strong>
+        </div>
+    </div>
+    <p class="nota">Faixas do protótipo: menos de 10% = BAIXO, de 10% a menos de 30% = MÉDIO, 30% ou mais = ALTO.</p>`;
+
+    // RN07: explica por que o caso vai para o técnico
+    if (status === 'AGUARDANDO_TECNICO') {
+        let motivo = 'Os sinais de enfezamento não confirmam a causa.';
+        if (nivel === 'ALTO') {
+            motivo = '30% ou mais das plantas estão atacadas.';
+        } else if (praga === undefined) {
+            motivo = 'Nenhum problema foi identificado com segurança.';
+        }
+
+        html += `<div class="aviso aviso--alerta">
+            <strong>Procure a assistência técnica</strong>
+            <p>${motivo} Contato: ${ATER}.</p>
+            <p>Este site não abre chamado: mostre esta tela ao técnico.</p>
+        </div>`;
+    }
+
+    document.querySelector('#resultado-nivel').innerHTML = html;
