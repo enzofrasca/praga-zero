@@ -63,3 +63,27 @@ praga-zero/
     ├── images/
     └── icons/
 ```
+
+## Como executar
+
+Abra o arquivo `index.html` no navegador.
+
+## Autores
+
+| Nome | RM | Turma | GitHub | LinkedIn |
+|---|---|---|---|---|
+| Miguel Freire Trevisan | 574414 | 1TDSPB | [GitHub](https://github.com/miguelfreiretrevisan) | [LinkedIn](https://www.linkedin.com/in/miguel-freire-trevisan-b22800431/) |
+| Carlos Eduardo Schmidt Cohen | 574448 | 1TDSPB | [GitHub](https://github.com/schmidtcarlos15-arch) | [LinkedIn](https://www.linkedin.com/in/carlos-schmidt-b08b95365/) |
+| Everson Domingos Junior | 575056 | 1TDSPB | [GitHub](https://github.com/Everson-Domingos-Junior) | [LinkedIn](https://www.linkedin.com/in/everson-domingos-junior/) |
+| Enzo Barbosa Frasca | 574943 | 1TDSPB | [GitHub](https://github.com/enzofrasca) | [LinkedIn](https://www.linkedin.com/in/enzo-frasca-768364275/) |
+| João Gabriel da Silva Leite | 575724 | 1TDSPB | [GitHub](https://github.com/JGTI09) | [LinkedIn](https://www.linkedin.com/in/joao-gabriel-4a6137442/) |
+
+## Repositório
+
+https://github.com/enzofrasca/praga-zero
+
+## Contato
+
+Pelo formulário da página [contato.html](contato.html).
+
+## Créditos das imagens
