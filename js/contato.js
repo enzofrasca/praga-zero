@@ -31,3 +31,12 @@ formContato.addEventListener('submit', (evento) => {
             temErro = true;
         }
     });
+
+    // Com erro, não envia
+    if (temErro) {
+        return;
+    }
+
+    sucesso.hidden = false;
+    formContato.reset();
+});
