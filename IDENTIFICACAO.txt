@@ -1,0 +1,10 @@
+PRAGA ZERO - Front-End Design Engineering - Global Solution 2026/2
+
+Integrantes (RM - Nome completo - Turma):
+RM574414 - Miguel Freire Trevisan - 1TDSPB
+RM574448 - Carlos Eduardo Schmidt Cohen - 1TDSPB
+RM575056 - Everson Domingos Junior - 1TDSPB
+RM574943 - Enzo Barbosa Frasca - 1TDSPB
+RM575724 - João Gabriel da Silva Leite - 1TDSPB
+
+Repositório (público): https://github.com/enzofrasca/praga-zero
