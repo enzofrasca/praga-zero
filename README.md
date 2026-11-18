@@ -87,3 +87,10 @@ https://github.com/enzofrasca/praga-zero
 Pelo formulário da página [contato.html](contato.html).
 
 ## Créditos das imagens
+
+- Foto da página inicial: "Plantação de hortaliças de agricultores familiares", de EuLuaFonseca, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Planta%C3%A7%C3%A3o_de_hortali%C3%A7as_de_agricultores_familiares.jpg)
+- Ícones: [Lucide](https://lucide.dev) (licença ISC)
+
+## Uso de IA
+
+Usamos IA generativa só como apoio para pesquisa, revisão de texto e explicação de erros. Todo o código foi revisado pela equipe.
