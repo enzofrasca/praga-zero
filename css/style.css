@@ -521,3 +521,20 @@ textarea {
     margin: 16px 0 4px;
     color: var(--verde-escuro);
 }
+
+/* FAQ */
+
+.faq {
+    max-width: 860px;
+}
+
+.faq__item {
+    margin-bottom: 12px;
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+}
+
+.faq__item h2 {
+    margin: 0;
+    font-size: 1.05rem;
+}
