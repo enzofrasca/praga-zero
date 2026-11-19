@@ -14,16 +14,20 @@ botaoMenu.addEventListener('click', () => {
     }
 });
 
-// Mostra a mensagem de erro embaixo de um campo (mensagem vazia = sem erro)
-function mostrarErro(campo, mensagem) {
-    const erro = document.querySelector('#erro-' + campo.id);
-    erro.textContent = mensagem;
-
-    if (mensagem === '') {
-        erro.hidden = true;
-        campo.classList.remove('campo-erro');
-    } else {
-        erro.hidden = false;
-        campo.classList.add('campo-erro');
+// Fecha o menu depois de escolher um link
+menu.addEventListener('click', (evento) => {
+    if (evento.target.closest('a') !== null) {
+        menu.classList.remove('menu--aberto');
+        botaoMenu.setAttribute('aria-expanded', 'false');
     }
-}
+});
+
+// Esc fecha o menu e devolve o foco ao botão
+document.addEventListener('keydown', (evento) => {
+    if (evento.key === 'Escape' && menu.classList.contains('menu--aberto')) {
+        menu.classList.remove('menu--aberto');
+        botaoMenu.setAttribute('aria-expanded', 'false');
+        botaoMenu.focus();
+    }
+});
+
