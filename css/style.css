@@ -591,3 +591,23 @@ textarea {
 }
 
 /* Tablet (768px ou mais) */
+
+@media (min-width: 768px) {
+    .grade--2,
+    .grade--3,
+    .grade-opcoes,
+    .lista-pragas,
+    .lista-integrantes {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero__grade,
+    .rodape__grade,
+    .campos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+/* Desktop (1200px ou mais) */
