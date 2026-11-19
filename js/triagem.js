@@ -186,3 +186,22 @@ function mostrarNivel(vistoriadas, afetadas, percentual, nivel, status, praga) {
     }
 
     document.querySelector('#resultado-nivel').innerHTML = html;
+}
+
+function mostrarManejo(praga) {
+    let html = '';
+    if (praga === undefined) {
+        html = `<h3>Enquanto espera o técnico</h3>
+            <p>Como nenhum problema foi identificado com segurança, não indicamos um cuidado específico. Continue observando as plantas.</p>
+            <p class="aviso aviso--terra">${RODAPE_MANEJO}</p>`;
+    } else {
+        let itens = '';
+        praga.manejos.forEach((manejo) => {
+            itens += `<li>${manejo.descricao} <span class="tag">${manejo.tipo}</span></li>`;
+        });
+        html = `<h3>Cuidados sem veneno para ${praga.nome}</h3>
+            <ol class="manejos">${itens}</ol>
+            <p class="aviso aviso--terra">${RODAPE_MANEJO}</p>`;
+    }
+    document.querySelector('#manejo').innerHTML = html;
+}
