@@ -26,3 +26,4 @@ function mostrarErro(campo, mensagem) {
         erro.hidden = false;
         campo.classList.add('campo-erro');
     }
+}
