@@ -538,3 +538,45 @@ textarea {
     margin: 0;
     font-size: 1.05rem;
 }
+
+.faq__pergunta {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    background: none;
+    font-weight: bold;
+    text-align: left;
+    color: var(--verde-escuro);
+    cursor: pointer;
+}
+
+/* Sinal de + ou − no fim da pergunta */
+.faq__pergunta::after {
+    content: " +";
+}
+
+.faq__pergunta[aria-expanded="true"]::after {
+    content: " −";
+}
+
+.faq__resposta {
+    padding: 0 20px 4px;
+}
+
+/* Contato e integrantes */
+
+.contato__grade {
+    display: grid;
+    gap: 32px;
+}
+
+.integrante {
+    text-align: center;
+}
+
+.integrante img {
+    width: 140px;
+    height: 140px;
+    border: 4px solid var(--verde);
+    border-radius: 50%;
+}
