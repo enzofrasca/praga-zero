@@ -57,6 +57,12 @@ formTriagem.addEventListener('submit', (evento) => {
         erroSintomas.hidden = false;
     }
     if (culturaMarcada === null || sintomasEscolhidos.length === 0) {
+        // Leva o foco para o primeiro grupo com problema
+        if (culturaMarcada === null) {
+            document.querySelector('input[name="cultura"]').focus();
+        } else {
+            document.querySelector('input[name="sintoma"]').focus();
+        }
         return;
     }
 
@@ -124,6 +130,7 @@ formNivel.addEventListener('submit', (evento) => {
     mostrarErro(campoAfetadas, erros.afetadas);
     if (erros.vistoriadas !== '' || erros.afetadas !== '') {
         secaoPasso.hidden = true;
+        (erros.vistoriadas !== '' ? campoVistoriadas : campoAfetadas).focus();
         return;
     }
 

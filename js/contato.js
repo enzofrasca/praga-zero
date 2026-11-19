@@ -24,16 +24,21 @@ formContato.addEventListener('submit', (evento) => {
     sucesso.hidden = true;
 
     let temErro = false;
+    let primeiroErro = null;
     campos.forEach((campo) => {
         const mensagem = validar(campo);
         mostrarErro(campo, mensagem);
         if (mensagem !== '') {
             temErro = true;
+            if (primeiroErro === null) {
+                primeiroErro = campo;
+            }
         }
     });
 
-    // Com erro, não envia
+    // Com erro, não envia e leva o foco para o primeiro campo com problema
     if (temErro) {
+        primeiroErro.focus();
         return;
     }
 
