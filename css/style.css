@@ -244,6 +244,30 @@ textarea {
     text-decoration: underline;
 }
 
+/* Botões de fonte maior e alto contraste */
+
+.acessibilidade {
+    display: flex;
+    gap: 8px;
+}
+
+.acessibilidade__botao {
+    min-height: 40px;
+    padding: 6px 12px;
+    border: 2px solid #ffffff;
+    border-radius: 999px;
+    background: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.acessibilidade__botao[aria-pressed="true"] {
+    background: #ffffff;
+    color: var(--verde-escuro);
+}
+
 /* Rodapé */
 
 .rodape {
@@ -672,5 +696,75 @@ textarea {
 
     .contato__grade {
         grid-template-columns: 2fr 1fr;
+    }
+}
+
+/* Preferências de acessibilidade escolhidas nos botões do cabeçalho */
+
+html.fonte-maior {
+    font-size: 22px;
+}
+
+html.alto-contraste {
+    --fundo: #000000;
+    --texto: #ffffff;
+    --cinza: #eeeeee;
+    --borda: #ffffff;
+    --areia: #101010;
+    --verde: #7fe08e;
+    --verde-escuro: #b6f2c0;
+    --verde-claro: #122915;
+    --terra: #ffb385;
+    --terra-clara: #2b1a12;
+    --vermelho: #ff9f97;
+    --vermelho-claro: #2b1512;
+    --laranja: #ffd18c;
+}
+
+html.alto-contraste .topo,
+html.alto-contraste .hero,
+html.alto-contraste .rodape {
+    background: #0a0a0a;
+}
+
+html.alto-contraste .menu a {
+    border-bottom-color: #ffffff;
+}
+
+html.alto-contraste .btn,
+html.alto-contraste .numero,
+html.alto-contraste .filtro__botao[aria-pressed="true"],
+html.alto-contraste .acessibilidade__botao[aria-pressed="true"] {
+    border-color: var(--verde);
+    background: var(--verde);
+    color: #000000;
+}
+
+html.alto-contraste .btn:hover {
+    background: var(--verde-escuro);
+}
+
+html.alto-contraste .btn--secundario {
+    background: none;
+    color: var(--verde-escuro);
+}
+
+html.alto-contraste .btn--claro {
+    border-color: #ffffff;
+    background: #ffffff;
+    color: #000000;
+}
+
+html.alto-contraste .integrante img {
+    border-color: #ffffff;
+}
+
+html.alto-contraste :focus-visible {
+    outline-color: #ffd18c;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
     }
 }
