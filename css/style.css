@@ -74,12 +74,43 @@ textarea {
     font: inherit;
 }
 
+:focus-visible {
+    outline: 3px solid var(--verde-escuro);
+    outline-offset: 2px;
+}
+
+.topo :focus-visible,
+.hero :focus-visible,
+.rodape :focus-visible {
+    outline-color: #ffffff;
+}
+
 /* Classes de apoio */
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 16px;
+}
+
+/* Link para pular o menu (aparece no primeiro Tab) */
+
+.pular {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 10;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: var(--verde-escuro);
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    transform: translateY(-250%);
+}
+
+.pular:focus {
+    transform: none;
 }
 
 .secao {
