@@ -68,6 +68,16 @@ praga-zero/
 
 Abra o arquivo `index.html` no navegador.
 
+## Acessibilidade
+
+- HTML semântico (`header`, `nav`, `main`, `section`, `footer`) e um `h1` por página
+- Link "Pular para o conteúdo" como primeira parada do teclado
+- Todos os campos com `label`, mensagens de erro ligadas por `aria-describedby` e foco levado ao primeiro campo com problema
+- Botões do menu, do filtro e do acordeão com `aria-expanded` / `aria-pressed`
+- Contraste mínimo de 4,5:1 nos textos e foco visível em todos os elementos
+- Botões de fonte maior e alto contraste no cabeçalho, com a escolha guardada no navegador
+- Layout testado em 390 px, 768 px e 1440 px, sem rolagem horizontal
+
 ## Autores
 
 | Nome | RM | Turma | GitHub | LinkedIn |
