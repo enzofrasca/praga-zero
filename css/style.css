@@ -611,3 +611,35 @@ textarea {
 }
 
 /* Desktop (1200px ou mais) */
+
+@media (min-width: 1200px) {
+    .menu-botao {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+        width: auto;
+        padding: 0;
+    }
+
+    .menu ul {
+        display: flex;
+    }
+
+    .menu a {
+        padding: 8px 10px;
+        border: none;
+    }
+
+    .grade--3,
+    .grade-opcoes,
+    .lista-pragas,
+    .lista-integrantes {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .contato__grade {
+        grid-template-columns: 2fr 1fr;
+    }
+}
