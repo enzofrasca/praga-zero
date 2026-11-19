@@ -92,6 +92,10 @@ Abra o arquivo `index.html` no navegador.
 
 https://github.com/enzofrasca/praga-zero
 
+## Site publicado
+
+O site também está no GitHub Pages: https://enzofrasca.github.io/praga-zero/
+
 ## Contato
 
 Pelo formulário da página [contato.html](contato.html).
