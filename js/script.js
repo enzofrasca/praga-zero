@@ -27,7 +27,10 @@ document.addEventListener('keydown', (evento) => {
     if (evento.key === 'Escape' && menu.classList.contains('menu--aberto')) {
         menu.classList.remove('menu--aberto');
         botaoMenu.setAttribute('aria-expanded', 'false');
-        botaoMenu.focus();
+        // No desktop o botão do menu fica escondido: o foco só volta se ele estiver visível
+        if (botaoMenu.offsetParent !== null) {
+            botaoMenu.focus();
+        }
     }
 });
 
